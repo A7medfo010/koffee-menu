@@ -50,8 +50,8 @@ body.english {
 
 /* الصورة في شاشة اللغة - كبيرة بدون مسافات */
 .kk-main-image {
-    width: 120px; /* أكبر حجماً */
-    height: 120px;
+    width: 200px; /* أكبر حجماً */
+    height: 200px;
     object-fit: contain;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -586,4 +586,5 @@ body.english .item-price-en {
     .item-price-en {
         font-size: 0.85rem;
     }
+
 }
