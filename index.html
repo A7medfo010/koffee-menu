@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koffee Kulture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- شاشة اختيار اللغة -->
+    <div class="language-screen" id="languageScreen">
+        <div class="logo-container">
+            <!-- الصورة الجديدة الكبيرة -->
+            <img src="https://i.postimg.cc/vB7TXxtg/010.png" alt="Koffee Kulture" class="kk-main-image">
+            <div class="logo-text">
+                <div class="logo-line-1">Koffee</div>
+                <div class="logo-line-2">Kulture</div>
+            </div>
+        </div>
+        
+        <p class="welcome-message" id="welcomeMessage">
+            أهلاً بكم في كوفي كلتشر! يُرجى اختيار لغتك المفضلة.
+        </p>
+        
+        <div class="languages">
+            <div class="lang-option active" data-lang="ar">
+                <div class="lang-flag">🇸🇦</div>
+                <h3 class="lang-name">العربية</h3>
+                <p class="lang-desc">تصفح القائمة باللغة العربية</p>
+            </div>
+            
+            <div class="lang-option" data-lang="en">
+                <div class="lang-flag">🇺🇸</div>
+                <h3 class="lang-name">English</h3>
+                <p class="lang-desc">Browse the menu in English</p>
+            </div>
+        </div>
+        
+        <p class="instruction">انقر على لغتك المفضلة للمتابعة</p>
+    </div>
+    
+    <!-- شاشة المنيو -->
+    <div class="menu-screen" id="menuScreen">
+        <header class="header">
+            <div class="header-logo">
+                <!-- الصورة في الهيدر (أصغر) -->
+                <img src="https://i.postimg.cc/vB7TXxtg/010.png" alt="Koffee Kulture" class="kk-header-image">
+                <div class="header-logo-text">
+                    <div>Koffee</div>
+                    <div>Kulture</div>
+                </div>
+            </div>
+            <p class="tagline" id="tagline">قهوة مميزة • أجواء مريحة • طعم لا يُنسى</p>
+        </header>
+        
+        <!-- قائمة التصنيفات العلوية -->
+        <div class="categories">
+            <button class="cat-btn active" data-cat="hot">
+                <i class="fas fa-mug-hot"></i>
+                <span id="catHot">Hot Coffee</span>
+            </button>
+            <button class="cat-btn" data-cat="cold">
+                <i class="fas fa-snowflake"></i>
+                <span id="catCold">Cold Coffee</span>
+            </button>
+            <button class="cat-btn" data-cat="matcha">
+                <i class="fas fa-leaf"></i>
+                <span id="catMatcha">Matcha</span>
+            </button>
+            <button class="cat-btn" data-cat="frappe">
+                <i class="fas fa-blender"></i>
+                <span id="catFrappe">Frappe</span>
+            </button>
+            <button class="cat-btn" data-cat="drinks">
+                <i class="fas fa-glass-cheers"></i>
+                <span id="catDrinks">Special Drinks</span>
+            </button>
+            <button class="cat-btn" data-cat="breakfast">
+                <i class="fas fa-egg"></i>
+                <span id="catBreakfast">Breakfast</span>
+            </button>
+            <button class="cat-btn" data-cat="bagels">
+                <i class="fas fa-bread-slice"></i>
+                <span id="catBagels">Bagels</span>
+            </button>
+            <button class="cat-btn" data-cat="sweets">
+                <i class="fas fa-cookie-bite"></i>
+                <span id="catSweets">Sweets</span>
+            </button>
+            <button class="cat-btn" data-cat="extras">
+                <i class="fas fa-plus-circle"></i>
+                <span id="catExtras">KK Extras</span>
+            </button>
+        </div>
+        
+        <!-- فلتر الأحجام -->
+        <div class="size-filter-container" style="display: none;">
+            <button class="size-filter-btn active" data-size="all">كل الأحجام</button>
+            <button class="size-filter-btn" data-size="medium">الحجم المتوسط (M)</button>
+            <button class="size-filter-btn" data-size="large">الحجم الكبير (L)</button>
+        </div>
+        
+        <main class="menu-content">
+            <!-- قسم القهوة الساخنة -->
+            <section class="menu-section" id="sectionHot" data-cat="hot">
+                <h2 class="section-title">
+                    <i class="fas fa-mug-hot"></i>
+                    <span id="sectionTitleHot">Hot Coffee</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Espresso</h3>
+                    <div class="item">
+                        <span class="item-name">Espresso</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">80 جـ</span>
+                            <span class="item-price-en">80 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Espresso Macchiato</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">85 جـ</span>
+                            <span class="item-price-en">85 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Americano</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">90 جـ</span>
+                            <span class="item-price-en">90 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Cortado</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">100 جـ</span>
+                            <span class="item-price-en">100 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Classic Lattes</h3>
+                    <div class="item">
+                        <span class="item-name">Flat White</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">100 جـ</span>
+                            <span class="item-price-en">100 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Cappuccino</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">115 جـ</span>
+                            <span class="item-price-en">115 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Classic Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">115 جـ</span>
+                            <span class="item-price-en">115 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">KK Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">120 جـ</span>
+                            <span class="item-price-en">120 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Special Lattes (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Spanish Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Spicy Spanish</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Salted Caramel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="165" data-l="185">165/185 جـ</span>
+                            <span class="item-price-en split-price" data-m="165" data-l="185">165/185 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Salted Vanilla Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="130" data-l="150">130/150 جـ</span>
+                            <span class="item-price-en split-price" data-m="130" data-l="150">130/150 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Pistachio Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="130" data-l="150">130/150 جـ</span>
+                            <span class="item-price-en split-price" data-m="130" data-l="150">130/150 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Honey Cinnamon Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Mocha (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Classic Mocha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">White Mocha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Hot Chocolate</h3>
+                    <div class="item">
+                        <span class="item-name">Classic Hot Chocolate</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">105 جـ</span>
+                            <span class="item-price-en">105 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">White Hot Chocolate</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">125 جـ</span>
+                            <span class="item-price-en">125 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم القهوة الباردة -->
+            <section class="menu-section" id="sectionCold" data-cat="cold">
+                <h2 class="section-title">
+                    <i class="fas fa-snowflake"></i>
+                    <span id="sectionTitleCold">Cold Coffee</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Iced Coffee (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Americano</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="90" data-l="110">90/110 جـ</span>
+                            <span class="item-price-en split-price" data-m="90" data-l="110">90/110 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="105" data-l="125">105/125 جـ</span>
+                            <span class="item-price-en split-price" data-m="105" data-l="125">105/125 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced KK Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="115" data-l="135">115/135 جـ</span>
+                            <span class="item-price-en split-price" data-m="115" data-l="135">115/135 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Spanish</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Spicy Spanish</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Special Iced Coffee (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Salted Caramel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Salted Vanilla</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced White Mocha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Pistachio</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Honey Cinnamon</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Brown Sugar</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="120" data-l="140">120/140 جـ</span>
+                            <span class="item-price-en split-price" data-m="120" data-l="140">120/140 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Banana Bread Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Blended Coffee (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Salted Caramel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Spicy Spanish</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Spanish</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Pistachio</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended White Mocha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Banana Bread Latte</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="120" data-l="140">120/140 جـ</span>
+                            <span class="item-price-en split-price" data-m="120" data-l="140">120/140 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الماتشا -->
+            <section class="menu-section" id="sectionMatcha" data-cat="matcha">
+                <h2 class="section-title">
+                    <i class="fas fa-leaf"></i>
+                    <span id="sectionTitleMatcha">Matcha Kulture</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Hot Matcha (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Hot Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Hot White Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="110" data-l="130">110/130 جـ</span>
+                            <span class="item-price-en split-price" data-m="110" data-l="130">110/130 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Hot Honey Cinnamon Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Hot Salted Caramel Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Hot Pistachio Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Iced Matcha (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Spanish Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Cherry Vanilla Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Salted Vanilla Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced White Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Iced Banana Bread Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="185" data-l="205">185/205 جـ</span>
+                            <span class="item-price-en split-price" data-m="185" data-l="205">185/205 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Blended Matcha (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="165" data-l="185">165/185 جـ</span>
+                            <span class="item-price-en split-price" data-m="165" data-l="185">165/185 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Strawberry Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Salted Caramel Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Pistachio Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended White Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="175" data-l="195">175/195 جـ</span>
+                            <span class="item-price-en split-price" data-m="175" data-l="195">175/195 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Mango Strawberry Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Peachy Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Dirty Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blended Banana Bread Matcha</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="135" data-l="155">135/155 جـ</span>
+                            <span class="item-price-en split-price" data-m="135" data-l="155">135/155 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الفرايه -->
+            <section class="menu-section" id="sectionFrappe" data-cat="frappe">
+                <h2 class="section-title">
+                    <i class="fas fa-blender"></i>
+                    <span id="sectionTitleFrappe">Frappe</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Coffee Frappe (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Coffee Frappe</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="130" data-l="150">130/150 جـ</span>
+                            <span class="item-price-en split-price" data-m="130" data-l="150">130/150 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Caramel Coffee Frappe</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Mocha Frappe</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="145" data-l="165">145/165 جـ</span>
+                            <span class="item-price-en split-price" data-m="145" data-l="165">145/165 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم المشروبات الخاصة -->
+            <section class="menu-section" id="sectionDrinks" data-cat="drinks">
+                <h2 class="section-title">
+                    <i class="fas fa-glass-cheers"></i>
+                    <span id="sectionTitleDrinks">Special Drinks</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Mojito (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Raspberry Mojito</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="155" data-l="175">155/175 جـ</span>
+                            <span class="item-price-en split-price" data-m="155" data-l="175">155/175 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blueberry Mojito</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="165" data-l="185">165/185 جـ</span>
+                            <span class="item-price-en split-price" data-m="165" data-l="185">165/185 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Passion Mojito</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="175" data-l="195">175/195 جـ</span>
+                            <span class="item-price-en split-price" data-m="175" data-l="195">175/195 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Ocean Breeze Mojito</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="170" data-l="190">170/190 جـ</span>
+                            <span class="item-price-en split-price" data-m="170" data-l="190">170/190 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Redbull (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Pink Redbull</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="180" data-l="200">180/200 جـ</span>
+                            <span class="item-price-en split-price" data-m="180" data-l="200">180/200 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Cocoberry Redbull</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="175" data-l="195">175/195 جـ</span>
+                            <span class="item-price-en split-price" data-m="175" data-l="195">175/195 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Refreshers & Ice Tea (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Bonbon Refresher</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="175" data-l="195">175/195 جـ</span>
+                            <span class="item-price-en split-price" data-m="175" data-l="195">175/195 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Peach Ice Tea</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="185" data-l="205">185/205 جـ</span>
+                            <span class="item-price-en split-price" data-m="185" data-l="205">185/205 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Mango Passion Ice Tea</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="185" data-l="205">185/205 جـ</span>
+                            <span class="item-price-en split-price" data-m="185" data-l="205">185/205 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Smoothies & Love Story (Medium/Large)</h3>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Love Story</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="110" data-l="130">110/130 جـ</span>
+                            <span class="item-price-en split-price" data-m="110" data-l="130">110/130 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Blueberry Smoothie</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Pina Colada Smoothie</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item" data-has-sizes="true">
+                        <span class="item-name">Lemon Mint Smoothie</span>
+                        <div class="price-container">
+                            <span class="item-price-ar split-price" data-m="125" data-l="145">125/145 جـ</span>
+                            <span class="item-price-en split-price" data-m="125" data-l="145">125/145 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الإفطار -->
+            <section class="menu-section" id="sectionBreakfast" data-cat="breakfast">
+                <h2 class="section-title">
+                    <i class="fas fa-egg"></i>
+                    <span id="sectionTitleBreakfast">KK Breakfast</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Sandwiches</h3>
+                    <div class="item">
+                        <span class="item-name">The KK Caesar</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">300 جـ</span>
+                            <span class="item-price-en">300 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">BBQ Rainbow</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">300 جـ</span>
+                            <span class="item-price-en">300 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mood Booster Bomb</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">310 جـ</span>
+                            <span class="item-price-en">310 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Sub Out</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">270 جـ</span>
+                            <span class="item-price-en">270 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">The Everything Club</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">325 جـ</span>
+                            <span class="item-price-en">325 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">The Basic S</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">385 جـ</span>
+                            <span class="item-price-en">385 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Philly Steak -wich</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">360 جـ</span>
+                            <span class="item-price-en">360 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Tahini Twist</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">285 جـ</span>
+                            <span class="item-price-en">285 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Spicy Tunacado</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">295 جـ</span>
+                            <span class="item-price-en">295 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Lazy Cheesy Toastie</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">315 جـ</span>
+                            <span class="item-price-en">315 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Toast & Croissant</h3>
+                    <div class="item">
+                        <span class="item-name">Salmon Avo on Toast</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">315 جـ</span>
+                            <span class="item-price-en">315 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Caprese Avo on Toast</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">285 جـ</span>
+                            <span class="item-price-en">285 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Halloumi Honey Avo on Toast</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">285 جـ</span>
+                            <span class="item-price-en">285 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Avocado on Toast</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">230 جـ</span>
+                            <span class="item-price-en">230 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Beetroot Hummus Avocado</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">220 جـ</span>
+                            <span class="item-price-en">220 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Caprese Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">230 جـ</span>
+                            <span class="item-price-en">230 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Turkey & Cheese Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Labneh & Zaatar Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Omelette & Eggs</h3>
+                    <div class="item">
+                        <span class="item-name">The Classic Omelette</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">190 جـ</span>
+                            <span class="item-price-en">190 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mushroom Invasion Omelette</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">290 جـ</span>
+                            <span class="item-price-en">290 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">The Cheesy Omelette</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">225 جـ</span>
+                            <span class="item-price-en">225 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">The LA Benedict</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">320 جـ</span>
+                            <span class="item-price-en">320 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Shroom Truffle Benedict</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">225 جـ</span>
+                            <span class="item-price-en">225 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Savory Breakfast Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">275 جـ</span>
+                            <span class="item-price-en">275 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Sesame Weekday Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">235 جـ</span>
+                            <span class="item-price-en">235 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Turkey Mix Tortilla</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">290 جـ</span>
+                            <span class="item-price-en">290 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الباجلز -->
+            <section class="menu-section" id="sectionBagels" data-cat="bagels">
+                <h2 class="section-title">
+                    <i class="fas fa-bread-slice"></i>
+                    <span id="sectionTitleBagels">Bagels Kulture</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Classic Bagels</h3>
+                    <div class="item">
+                        <span class="item-name">Cream Cheese Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">150 جـ</span>
+                            <span class="item-price-en">150 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">All-Time Favorite</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">235 جـ</span>
+                            <span class="item-price-en">235 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Italian Twist</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">4 Cheese Garlic Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Lunch Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">260 جـ</span>
+                            <span class="item-price-en">260 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Special Bagels</h3>
+                    <div class="item">
+                        <span class="item-name">Philly Steak Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">360 جـ</span>
+                            <span class="item-price-en">360 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Smoked to Perfection</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">365 جـ</span>
+                            <span class="item-price-en">365 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Ultimate Halloumi</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">235 جـ</span>
+                            <span class="item-price-en">235 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">We've Got Beef</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">285 جـ</span>
+                            <span class="item-price-en">285 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Kulture Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">370 جـ</span>
+                            <span class="item-price-en">370 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Salty Beef Truffle Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">330 جـ</span>
+                            <span class="item-price-en">330 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Spicy Tunacado Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">260 جـ</span>
+                            <span class="item-price-en">260 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Sriracha Bagel</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">330 جـ</span>
+                            <span class="item-price-en">330 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم الحلويات -->
+            <section class="menu-section" id="sectionSweets" data-cat="sweets">
+                <h2 class="section-title">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span id="sectionTitleSweets">Sweet Tooth Kulture</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Cake & Cheesecake</h3>
+                    <div class="item">
+                        <span class="item-name">Chocolate Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">150 جـ</span>
+                            <span class="item-price-en">150 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Carrot Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">145 جـ</span>
+                            <span class="item-price-en">145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">San Sebastian Cheesecake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">180 جـ</span>
+                            <span class="item-price-en">180 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Tiramisu Jar</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">190 جـ</span>
+                            <span class="item-price-en">190 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Lemon Berry Can Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">160 جـ</span>
+                            <span class="item-price-en">160 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Almond Carrot Can Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">145 جـ</span>
+                            <span class="item-price-en">145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Birthday Can Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">145 جـ</span>
+                            <span class="item-price-en">145 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Chocolate Espresso Can Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">170 جـ</span>
+                            <span class="item-price-en">170 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Chocolate Can Cake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">170 جـ</span>
+                            <span class="item-price-en">170 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Sweet Croissant</h3>
+                    <div class="item">
+                        <span class="item-name">All Butter Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">80 جـ</span>
+                            <span class="item-price-en">80 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Pistachio Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">140 جـ</span>
+                            <span class="item-price-en">140 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Pistachio Konafa Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">120 جـ</span>
+                            <span class="item-price-en">120 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Almond Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">110 جـ</span>
+                            <span class="item-price-en">110 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Lotus Biscoff Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">115 جـ</span>
+                            <span class="item-price-en">115 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Chocolate Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">95 جـ</span>
+                            <span class="item-price-en">95 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Bueno Croissant</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">95 جـ</span>
+                            <span class="item-price-en">95 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Pain Au Chocolat</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">110 جـ</span>
+                            <span class="item-price-en">110 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Pain Suisse</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">EBY's Millefeuille</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Small Sweets</h3>
+                    <div class="item">
+                        <span class="item-name">Chocolate Chip Cookie</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">100 جـ</span>
+                            <span class="item-price-en">100 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mini Salted Caramel Cheesecake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">95 جـ</span>
+                            <span class="item-price-en">95 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mini Lotus Biscoff Cheesecake</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">75 جـ</span>
+                            <span class="item-price-en">75 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Salads</h3>
+                    <div class="item">
+                        <span class="item-name">Triple S Salad</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">295 جـ</span>
+                            <span class="item-price-en">295 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mex Chicken Salad</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">280 جـ</span>
+                            <span class="item-price-en">280 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Sweet Earth Salad</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">190 جـ</span>
+                            <span class="item-price-en">190 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">S.A.SS Salad</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">365 جـ</span>
+                            <span class="item-price-en">365 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">OPA Greece Salad</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">250 جـ</span>
+                            <span class="item-price-en">250 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Bresaola Salad</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">290 جـ</span>
+                            <span class="item-price-en">290 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم النيديمات والأورج -->
+            <section class="menu-section" id="sectionExtras" data-cat="extras">
+                <h2 class="section-title">
+                    <i class="fas fa-plus-circle"></i>
+                    <span id="sectionTitleExtras">KK Extras</span>
+                </h2>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Add-ons</h3>
+                    <div class="item">
+                        <span class="item-name">Extra Shot</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Extra Flavor</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Plant Based Milk</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Lactose Free Milk</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Classic Syrups</h3>
+                    <div class="item">
+                        <span class="item-name">Caramel Classic</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Chocolate Classic</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Vanilla Classic</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Pistachio Classic</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">40 جـ</span>
+                            <span class="item-price-en">40 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Salted Caramel Classic</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">40 جـ</span>
+                            <span class="item-price-en">40 LE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-group">
+                    <h3 class="group-title">Extra Ingredients for Omelette</h3>
+                    <div class="item">
+                        <span class="item-name">Extra Mushrooms</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">35 جـ</span>
+                            <span class="item-price-en">35 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Extra Turkey</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">45 جـ</span>
+                            <span class="item-price-en">45 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Mixed Veggies</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">30 جـ</span>
+                            <span class="item-price-en">30 LE</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="item-name">Fried Brie</span>
+                        <div class="price-container">
+                            <span class="item-price-ar">45 جـ</span>
+                            <span class="item-price-en">45 LE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-clock"></i> <span id="footerHours">Opening Hours</span></h3>
+                    <p id="workHours1">Sunday - Thursday: 7 AM - 12 AM</p>
+                    <p id="workHours2">Friday - Saturday: 8 AM - 2 AM</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> <span id="footerLocation">Location</span></h3>
+                    <p id="addressText">Kerdasa, City</p>
+                    <p id="phoneText">Phone: 01069092238</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Koffee Kulture. <span id="footerRights">All rights reserved</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
